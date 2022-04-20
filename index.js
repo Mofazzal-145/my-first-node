@@ -29,6 +29,14 @@ app.get('/user/:id', (req, res) => {
     res.send(user)
 })
 
+app.get('/fruits', (req, res) => {
+    res.send('mango', 'apples', 'oranges');
+})
+
+app.get('/fruits/mango/valo', (req, res) => {
+    res.send('sour sour mango flavor');
+})
+
 app.listen(port, () => {
     console.log('Listening to port', port);
 })
